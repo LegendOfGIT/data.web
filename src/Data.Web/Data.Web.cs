@@ -19,15 +19,18 @@ namespace Data.Web
 
             try
             {
-                var request = WebRequest.Create(URL);
-                var response = request.GetResponse();
-
-                var stream = response == null ? null : response.GetResponseStream();
-                using (var reader = Encoding == null ? new StreamReader(stream, true) : new StreamReader(stream, Encoding, false))
+              var request = WebRequest.Create(URL);
+              using (var response = request.GetResponse())
+              {
+                using (var stream = response == null ? null : response.GetResponseStream())
                 {
+                  using (var reader = Encoding == null ? new StreamReader(stream, true) : new StreamReader(stream, Encoding, false))
+                  {
                     stream.Flush();
                     result = reader.ReadToEnd();
+                  }
                 }
+              }
             }
             catch (Exception) { }
 

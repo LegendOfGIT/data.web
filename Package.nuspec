@@ -2,13 +2,14 @@
 <package >
   <metadata>
     <id>Data.Web</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <authors>Marcel Schneider</authors>
     <owners>Marcel Schneider</owners>
     <projectUrl>https://github.com/LegendOfGIT/Nuget-Repository/tree/master/Data.Web/src/Data.Web</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Stellt Werkzeuge für die Vereinfachung der Arbeit mit Internetinformationen zur Verfügung</description>
     <releaseNotes>
+		Version 1.0.3: Funktion "GetWebsiteContent" korrigiert. Fue IDisposable Komponenten wird nun mit using gearbeitet.
 		Version 1.0.2: Fehlerhaftes Laden von Webseiten führt nun nicht mehr zum Abbruch
 		Version 1.0.1: Unicode wird nun über WebUtility.HtmlDecode ersetzt.
 		Version 1.0.0: Erste Version
